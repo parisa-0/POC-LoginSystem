@@ -12,4 +12,4 @@ Attach a database
 Security xss filters
 Web filters
 
-Move to Sping
+Move to Sping and JWT token authorisation

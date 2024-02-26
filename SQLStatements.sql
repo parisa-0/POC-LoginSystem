@@ -1,4 +1,4 @@
-create database Users;
+create database loginsystem;
 
 CREATE TABLE Users (
     UserName varchar(255),

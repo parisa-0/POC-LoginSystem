@@ -2,17 +2,6 @@ package org.example;
 
 import java.sql.*;
 
-
-// ask for a user name,  //
-// find the user ,  //
-// if not found, say : not found , register? y/n   
-// register : user to give username and password  
-// check that the password is a valid password, if not they can try again max 3 attempts   
-// Login  
-// if found , ask for password  
-// look for the password on the database, and it should correspond  
-// if the user gave the wrong password they can try again max 3 attempts
-
 public class DatabaseLibrary {
     private final String URL = "jdbc:mysql://localhost/LoginSystem";
     private final String USER = "root";

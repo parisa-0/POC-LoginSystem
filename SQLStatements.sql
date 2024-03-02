@@ -55,3 +55,26 @@ FOREIGN KEY (UserName) REFERENCES Users (UserName);
 alter table UserMoviesSaved
 ADD CONSTRAINT FK_un
 FOREIGN KEY (UserName) REFERENCES Users (UserName);
+
+insert into users (UserName,Password)
+values
+('BarryAllen', 'TheFlash!10'),
+('OliverQueen', 'GreenArrow!20'),
+('TonyStark', 'IronMan!30'),
+('ClarkKent', 'Superman!40'),
+('PeterParker', 'Spiderman!5'),
+('BruceWayne', 'Batman!14'),
+('CharlesXavier', 'ProfX!39'),
+('ScarletWitch', 'Witch!30'),
+('SteveRogers', 'CaptainAmerica!32'),
+('CarolDanvers', 'Mavel!13'),
+('NickFury', 'Leader!20'),
+('KaraZorEl', 'Supergirl!11'),
+('Tchalla', 'BlackPanther!17'),
+('StevenStrange', 'DrStrange!98'),
+('ClintBarton', 'HawkEye!19'),
+('RyanReynolds', 'GreenLantern!70'),
+('BruceBanner', 'Hulk!50'),
+('Logan', 'Wolverine!60'),
+('DianaPrince', 'WonderWoman!100'),
+('DickGrayson', 'Robin!10')

@@ -27,3 +27,31 @@ CREATE TABLE UserMoviesSaved (
     MovieName varchar(255),
     DateMovieWatched datetime
 );
+
+alter table Movies
+ADD CONSTRAINT PK_mn
+Primary KEY (MovieName) ;
+
+alter table UserMoviesWatched
+ADD CONSTRAINT PK_un
+Primary KEY (UserName) ;
+
+alter table UserMoviesSaved
+ADD CONSTRAINT PK_un
+Primary KEY (UserName) ;
+
+alter table UserMoviesSaved
+ADD CONSTRAINT FK_un2
+FOREIGN KEY (UserName) REFERENCES Users (UserName);
+
+alter table UserMoviesWatched
+ADD CONSTRAINT PK_un
+Primary KEY (UserName) ;
+
+alter table UserMoviesWatched
+ADD CONSTRAINT FK_un
+FOREIGN KEY (UserName) REFERENCES Users (UserName);
+
+alter table UserMoviesSaved
+ADD CONSTRAINT FK_un
+FOREIGN KEY (UserName) REFERENCES Users (UserName);

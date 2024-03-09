@@ -1,39 +1,29 @@
 create database loginsystem;
 
 CREATE TABLE Users (
-    UserID varchar(255),
+    UserID int primary key auto_increment,
     UserName varchar(255),
     Password varchar(255)
 );
 
-alter table Users
-ADD CONSTRAINT PK_uid
-Primary KEY (UserID) ;
-
 CREATE TABLE Movies (
-	MovieID varchar(255),
+	MovieID int primary key auto_increment,
     MovieName varchar(255),
     AverageRating varchar(255),
     Review varchar(255),
     YearAdded datetime
 );
 
-alter table Movies
-ADD CONSTRAINT PK_mid
-Primary KEY (MovieID) ;
+
 
 CREATE TABLE UserMoviesWatched (
-	UserMovieWatchedID varchar(255),
+	UserMovieWatchedID int primary key auto_increment,
     UserID varchar(255),
     MovieID varchar(255),
-    UserName varchar(255),
-    MovieName varchar(255),
     DateMovieWatched datetime
 );
 
-alter table UserMoviesWatched
-ADD CONSTRAINT PK_umw
-Primary KEY (UserMovieWatchedID) ;
+
 
 alter table UserMoviesWatched
 ADD CONSTRAINT FK_un2
@@ -45,17 +35,13 @@ FOREIGN KEY (MovieID) REFERENCES Movies (MovieID);
 
 
 CREATE TABLE UserMoviesSaved (
-	UserMovieSavedID varchar(255),
+	UserMovieSavedID int primary key auto_increment,
     UserID varchar(255),
     MovieID varchar(255),
-    UserName varchar(255),
-    MovieName varchar(255),
     DateMovieSaved datetime
 );
 
-alter table UserMoviesSaved
-ADD CONSTRAINT PK_ums
-Primary KEY (UserMovieSAvedID) ;
+
 
 alter table UserMoviesSaved
 ADD CONSTRAINT FK_un3
@@ -91,59 +77,59 @@ values
 (19,'DianaPrince', 'WonderWoman!100'),
 (20,'DickGrayson', 'Robin!10')
 
-insert into movies (MovieID,MovieName)
+insert into movies (MovieName)
 values
-(1,'The Wolf Of Wall Street'),
-(2,'Raiders Of The Lost Ark'),
-(3,'Speed'),
-(4,'The Matrix'),
-(5,'Once Upon A Time In Hollywood'),
-(6,'There Will Be Blood'),
-(7,'Singing In The Rain'),
-(8,'Goodfellas'),
-(9,'Bicyle Thieves'),
-(10,'The Dark Knight'),
-(11,'Senna'),
-(12,'Oppenheimer'),
-(13,'Kiss Kiss Bang Bang'),
-(14,'Gothika'),
-(15,'Inception'),
-(16,'Memento'),
-(17,'City Lights'),
-(18,'Jaws'),
-(19,'Star Wars'),
-(20,'Alien'),
-(21,'Pulp Fiction'),
-(22,'The Social Network'),
-(23,'Rservoir Dogs'),
-(24,'Lost In Translation'),
-(25,'Taxi Driver'),
-(26,'Modern Times'),
-(27,'Blade Runner'),
-(28,'Airplane'),
-(29,'Mad Max'),
-(30,'Brokeback Mountain'),
-(31,'The Blair Witch Project'),
-(32,'The General'),
-(33,'Eternal Sunshine Of The Spotless Mind'),
-(34,'Heat'),
-(35,'Gravity'),
-(36,'The Godfather'),
-(37,'Black Panther'),
-(38,'Bridesmaids'),
-(39,'Manchester By The Sea'),
-(40,'Oceans 11'),
-(41,'Parasite'),
-(42,'Moonlight'),
-(43,'La La Land'),
-(44,'Get Out'),
-(45,'Zodiac'),
-(46,'Gladiator'),
-(47,'No Country For Old Men'),
-(48,'Persepolis'),
-(49,'Paddington'),
-(50,'The Incredibles'),
-(51,'Ted')
+('The Wolf Of Wall Street'),
+('Raiders Of The Lost Ark'),
+('Speed'),
+('The Matrix'),
+('Once Upon A Time In Hollywood'),
+('There Will Be Blood'),
+('Singing In The Rain'),
+('Goodfellas'),
+('Bicyle Thieves'),
+('The Dark Knight'),
+('Senna'),
+('Oppenheimer'),
+('Kiss Kiss Bang Bang'),
+('Gothika'),
+('Inception'),
+('Memento'),
+('City Lights'),
+('Jaws'),
+('Star Wars'),
+('Alien'),
+('Pulp Fiction'),
+('The Social Network'),
+('Rservoir Dogs'),
+('Lost In Translation'),
+('Taxi Driver'),
+('Modern Times'),
+('Blade Runner'),
+('Airplane'),
+('Mad Max'),
+('Brokeback Mountain'),
+('The Blair Witch Project'),
+('The General'),
+('Eternal Sunshine Of The Spotless Mind'),
+('Heat'),
+('Gravity'),
+('The Godfather'),
+('Black Panther'),
+('Bridesmaids'),
+('Manchester By The Sea'),
+('Oceans 11'),
+('Parasite'),
+('Moonlight'),
+('La La Land'),
+('Get Out'),
+('Zodiac'),
+('Gladiator'),
+('No Country For Old Men'),
+('Persepolis'),
+('Paddington'),
+('The Incredibles'),
+('Ted')
 
 
 insert into UserMoviesSaved (UserMovieSavedId,UserName,MovieName,DateMovieSaved)

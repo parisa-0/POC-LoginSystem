@@ -1,15 +1,26 @@
-# POC-LoginSystem
+# Basic Username/Password Login System
 
-Build a Login System using this link as a resource: https://www.digitalocean.com/community/tutorials/java-servlet-filter-example-tutorial and this link https://docs.oracle.com/cd/E13210_01/wlcs/docs20/p13ndev/jsptags.htm
+This is a simple username/password login system implemented in Java using HDBC (Haskell Database Connectivity). The system allows users to register, log in, and manage their sessions securely.
 
-Using:
-JSP/Servlet
-Scope
-Cache
-Session Management
-Multi threading
-Attach a database
-Security xss filters
-Web filters
+## Features
 
-Move to Sping and JWT token authorisation
+- User registration
+- User login
+
+## Technologies Used
+
+- Java
+- MySQL
+
+## Getting Started
+
+### Prerequisites
+
+- Java Development Kit (JDK) 17 or higher
+- MySQL library
+
+### Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/parisa-0/POC-LoginSystem.git

@@ -1,6 +1,6 @@
 # Basic Username/Password Login System
 
-This is a simple username/password login system implemented in Java using HDBC (Haskell Database Connectivity). The system allows users to register, log in, and manage their sessions securely.
+This is a simple username/password login system implemented in Java using MySQL database. The system allows users to register and log in.
 
 ## Features
 
